@@ -4,13 +4,13 @@ func quickSort(arr []int, left, right int) []int {
 	if left >= right {
 		return arr
 	}
-	arr, mid := partition(arr, left, right)
+	arr, mid := partition1(arr, left, right)
 	quickSort(arr, left, mid-1)
 	quickSort(arr, mid+1, right)
 	return arr
 }
 
-func partition(arr []int, left, right int) ([]int, int) {
+func partition1(arr []int, left, right int) ([]int, int) {
 	pivot := arr[right]
 	i := left
 	for j := i; j < right; j++ {
