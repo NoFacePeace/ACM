@@ -15,7 +15,7 @@ type item struct {
 	Next *item
 }
 
-func Constructor(capacity int) LRUCache {
+func LRUConstructor(capacity int) LRUCache {
 	h := &item{}
 	t := &item{}
 	h.Next = t
